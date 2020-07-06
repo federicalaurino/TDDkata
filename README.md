@@ -51,6 +51,6 @@ Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
 
 **IMPORTANT:**  Implement the requirements focusing on **writing the best code** you can produce.
 
-**CODE SUBMISSION:** Add the code to your own Github account and send us the link.
+**CODE SUBMISSION:** Add the code to your own account and send us the link.
 
 Credits to [Roy Osherove](http://osherove.com/tdd-kata-1) for the original idea.
