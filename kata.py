@@ -147,3 +147,46 @@ def add_5(numbers: str) -> int:
 
 test_5(add_5)
 
+###############################
+# STEP 6: sum multiple integers in a string allowing for multiple lines
+# and different delimiter. Numbers bigger than 1000 are ignored.
+# Empty string returns 0. Raising exception in case of negative numbers
+# and print all negatives. 
+
+def test_6(fun):
+	# make sure previous tests still work
+	test_5(fun)
+	# new test
+	assert fun("//.\n1.2\n2000") == 3 
+
+class NegativesError(Exception):
+	"""Exception printing negative numbers if present"""
+	def __init__(self, neg):
+		self.msg = "negatives not allowed: {}".format(",".join(neg))
+		super(NegativesError,self).__init__(self.msg)
+
+def add_6(numbers: str) -> int:
+	res = 0
+	if numbers: # if not case 0
+		lines = numbers.split("\n")
+		# choose delimiter
+		delimiter = "," # default
+		if lines[0][0:2] == "//":
+			delimiter = lines[0][2::] # new delimiter
+			lines = lines[1::] # lines to be read
+		# sum numbers if no negatives
+		negatives = []
+		for l in lines:
+			for n in l.split(delimiter):
+				if (int(n)<=1000) & (not negatives): # small numbers ignored and no negatives so far
+					res += int(n)
+				if(int(n)<0):
+					negatives.append(n)
+		if negatives:
+			raise NegativesError(negatives)
+	return res
+
+
+test_6(add_6)
+
+
