@@ -7,7 +7,9 @@ Python 3.8.8
 ## Usage 
 to run the code type ```python kata.py```. If nothing displays, it means that all tests are passed.
 
-# String Calculator Kata
+***********************************************************
+
+# Kata instructions
 
 ## Before you start
 * Try not to read ahead.
