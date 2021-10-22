@@ -145,6 +145,5 @@ def add_5(numbers: str) -> int:
 			raise NegativesError(negatives)
 	return res
 
-
 test_5(add_5)
 
