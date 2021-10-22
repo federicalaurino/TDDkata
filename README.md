@@ -1,5 +1,13 @@
+# kata.py
+A Python solution to the TDD Kata (instructions below). 
+
+## Requirements
+Python 3.8.8
+
+## Usage 
+to run the code type ```python kata.py```. If nothing displays, it means that all tests are passed.
+
 # String Calculator Kata
-The following is a TDD Kata, an exercise in coding, refactoring and test-first, that you should apply daily for at least 15-30 minutes.
 
 ## Before you start
 * Try not to read ahead.
